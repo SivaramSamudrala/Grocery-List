@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    *{
+        box-sizing: border-box;
+    }
+    .container{
+        align-items: center;
+        text-align: center;
+    }
+       #button {
+        background-color: #3ba349;
+        border: none;
+        color: rgb(250, 10, 10);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 40px
+      }
+      body{
+        background-color: aquamarine ;
+        margin-top: 2cm;
+        margin-left: 3cm;
+        
+      }
+      h1{
+        text-align: center;
+       margin-right: 12cm;
+      }
+     
+      li{
+        border: 20px solid aquamarine ;
+        width: fit-content;
+        background-color:khaki ;
+        font-size: xx-large;
+      }
+      #move{
+        background-color: #ee0404;
+        border: none;
+        color: rgb(7, 247, 27);
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+       margin-right: 10cm;
+        cursor: pointer;
+        border-radius: 40px;
+
+      }
+   </style>
+   <script>
+   function additem() 
+    {
+      var a=document.getElementById("list")
+      var b=document.createElement("li")
+      var c=document.getElementById("text").value
+    b.innerText=c;
+      a.appendChild(b)
+    }
+    function remove()
+    {
+        var d=document.getElementById("list")
+        list.removeChild(list.firstChild);
+    }
+   </script>
+</head>
+<body>
+    <form action="">
+    <h1 >GROCERY LIST</h1>
+
+    <input type="text" style="height: 2cm; width: 60%;background-color: rgb(149, 149, 165); border: 2px solid blue;" placeholder="Enter Item Name" id="text">
+
+   <input type="button" name="" id="button" value="Add Items" onclick="additem()">
+  
+
+
+   <div  class="container">
+   <ol id="list">
+  
+
+   </ol>
+   <input type="button" value="Remove" id="move" onclick="remove()" >
+</div>
+</form>
+</body>
+</html>
